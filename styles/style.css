@@ -1,0 +1,46 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f5;
+}
+
+#page-home {
+    height: 100vh;
+    background: url("../assets/icones/home-background.svg") no-repeat;
+    background-position: 35vw 20vh;
+}
+
+#page-home .content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home nav a {
+    display: flex;
+}
+
+#page-home nav a span {
+    margin-right: 16px;
+    display: flex;
+    background-image: url("../assets/icones/log-in.svg");
+    width: 20px;
+    height: 20px;
+}
+
+
+
