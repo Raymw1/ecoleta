@@ -28,4 +28,89 @@
     margin-right: 16px;
 }
 
+form {
+    background-color: #fff;
+    padding: 64px;
+    margin: 80px auto 120px;
+    width: 90%;
+    max-width: 730px;
+    border-radius: 8px;
+}
+
+form h1 {
+    font-size: 36px;
+    max-width: 269px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: none;
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    flex: 1;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    opacity: 0.6;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+    border: none;
+    padding: 16px 24px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form .field-group {
+    display: flex;
+}
+
+/* form .field-group .field:nth-child(odd) */
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+
+
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--greenpeace);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: background-color 400ms
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
+
+
+
 
