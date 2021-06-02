@@ -12,7 +12,7 @@
         position: absolute;
         bottom: 48px;
         left: 50%;  /* ALIGN TO CENTER */
-        transform: translate(-50%);
+        transform: translateX(-50%);
     }
     #page-home main {
         align-items: center;
@@ -27,6 +27,6 @@
 
 @media (max-height: 760px) {
     #page-home {
-        background-position-y: 180px;
+        background-position-y: 150px;
     }
 }
