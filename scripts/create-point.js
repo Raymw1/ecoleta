@@ -1,18 +1,18 @@
 // let ufField = document.querySelector("select#uf");
 // -------------------------  STATES ---------------------------
-let ufField = document.querySelector("select[name=uf]");
-let stateInput = document.querySelector("input[name=state]");
-let citiesField = document.querySelector("select[name=cities]");
+const ufField = document.querySelector("select[name=uf]");
+const stateInput = document.querySelector("input[name=state]");
+const citiesField = document.querySelector("select[name=cities]");
 function populateUFs() {
-    let ufURL = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
+    const ufURL = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
     getAPI(ufURL, ufField);
 }
 
 function getCities(event) {
-    let indexSelectedState = event.target.selectedIndex;
+    const indexSelectedState = event.target.selectedIndex;
     stateInput.value = event.target.options[indexSelectedState].text;
-    let ufValue = event.target.value;
-    let cityURL = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
+    const ufValue = event.target.value;
+    const cityURL = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
     citiesField.innerHTML = `<option value="" disabled selected>Selecione a cidade</option>`;
     citiesField.disabled = true;
     getAPI(cityURL, citiesField);
@@ -35,3 +35,26 @@ ufField.addEventListener("change", getCities);
 
 populateUFs();
 
+// -------------------------  GRID ITEMS ---------------------------
+const collectedItems = document.querySelector("input[name=items]")
+const itemsToCollect = document.querySelectorAll(".items-grid li");
+let selectedItems = []
+for (const item of itemsToCollect) {
+    item.addEventListener("click", () => {
+        item.classList.toggle("selected");
+        const itemId = item.dataset.id;
+        const alreadySelected = selectedItems.findIndex( item => {
+            return item == itemId;  // Se encontrou ou não
+        })
+        if (alreadySelected >= 0) {
+            const filteredItems = selectedItems.filter( item => {
+                const itemIsDifferent = item != itemId;
+                return itemIsDifferent;
+            })
+            selectedItems = filteredItems;
+        }   else {
+            selectedItems.push(itemId)
+        }
+        collectedItems.value = selectedItems
+    })
+}
