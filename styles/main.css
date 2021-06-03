@@ -1,6 +1,7 @@
 :root {
     --purple: #322153;
     --greenpeace: #34CB79;
+    --ice: #f0f0f5;
 }
 
 html {
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-    background: #f0f0f5;
+    background: var(--ice);
     -webkit-font-smoothing: antialiased;
 }
 

@@ -28,7 +28,7 @@
             </main>
         </div>
     </div>
-    <div class="modal">
+    <div id="modal" class="hide">
         <div class="content">
             <div class="header">
                 <h1>Pontos de coleta</h1>
@@ -36,10 +36,11 @@
             </div>
             <form action="#">
                 <label for="search">Digite a cidade</label>
-                <div class="search-field">
-                    <input type="text" name="search">
+                <div class="field">
+                    <input type="text" name="search" placeholder="Digite a cidade" autocomplete="off">
                     <button type="submit">
-                        <img src="assets/icones/search.svg" alt="Buscar">
+                        <!-- <img src="assets/icones/search.svg" alt="Buscar"> -->
+                        Buscar
                     </button>
                 </div>
             </form>

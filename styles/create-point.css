@@ -80,7 +80,7 @@ form label {
 }
 
 form input, form select {
-    background-color: #f0f0f5;
+    background-color: var(--ice);
     border: none;
     padding: 16px 24px;
     outline: none;
