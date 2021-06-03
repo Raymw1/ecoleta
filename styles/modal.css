@@ -56,7 +56,6 @@
 #modal form .field {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 #modal form input, #modal form button {
@@ -71,6 +70,7 @@
     padding: 16px 24px;
     color: #6c6c80;
     outline: none;
+    margin-bottom: 8px;
 }
 
 #modal form button {
