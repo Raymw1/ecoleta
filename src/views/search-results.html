@@ -8,26 +8,26 @@
 {% block content %}
     {% include "templates/page-header.html" %}
     <main>
+        {% if amount > 0 %}
         <h4>
-            <strong>2 pontos</strong>
-            encontrados</h4>
+            <strong>{{ amount }} pontos</strong>
+            encontrados
+        </h4>
         <div class="cards">
+            {% for place in places %}
             <div class="card">
-                <img src="assets/results/colectoria.png" alt="Colectoria">
-                <h1>Colectoria</h1>
-                <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+                <img src="{{ place.image }}" alt="{{ place.name }}">
+                <h1>{{ place.name }}</h1>
+                <h3>{{ place.items }}</h3>
                 <address>
-                    Rio do Sul, Santa Catarina <br> Guilherme Gemballa, Jardim América <br> Nº 260
+                    {{ place.city }}, {{ place.uf }} <br> {{ place.address }} <br> {{ place.number }}
                 </address>
             </div>
-            <div class="card">
-                <img src="assets/results/colectoria.png" alt="Paperside">
-                <h1>Paperside</h1>
-                <h3>Papéis e Papelão</h3>
-                <address>
-                    Rio do Sul, Santa Catarina <br> Guilherme Gemballa, Jardim América <br> Nº 260
-                </address>
-            </div>
+            {% endfor %}
         </div>
+        {% else %}
+        <h1>Não há pontos cadastrados ainda!</h1>
+        <h4 id="no-found"><strong>Tente voltar mais tarde!</strong></h4>
+        {% endif %}
     </main>
 {% endblock content %}

@@ -11,7 +11,7 @@ db.serialize( () => {
     )`);
     // Insert data
     let query = `INSERT INTO places (name, image, address, number, uf, city, items) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-    let items = ["Paperside", "../../public/assets/results/colectoria.png", 
+    let items = ["Paperside", "public/assets/results/colectoria.png", 
     "Guilherme Gemballa, Jardim América", "Nº 260", "Santa Catarina", "Rio do Sul", "Papéis e Papelão"];
     function afterInsert(err) {
         if (err) {
