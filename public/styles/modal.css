@@ -91,4 +91,18 @@
     background-color: #2fb85e;
 }
 
+#modal.point .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 500ms;
+}
+
+#modal.point .content h1 {
+    color: #fff;
+}
+
+#modal.point .content img {
+    max-width: 64px;
+}
 
